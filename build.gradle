@@ -1,0 +1,12 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+version = '0.0.1'
+group = 'photo-gallery'
+sourceCompatibility = 1.8
