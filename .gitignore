@@ -91,3 +91,7 @@ typings/
 # ignore bundle.js file
 web/js/*.bundle.js
 /web/package-lock.json
+.gradle/**
+
+web/.DS_Store
+.DS_Store
