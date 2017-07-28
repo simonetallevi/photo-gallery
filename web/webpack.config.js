@@ -31,7 +31,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             title: 'Photo Gallery',
-            filename: 'index.html',
+            filename: '../index.html',
             minify: {
                 collapseWhitespace: true
             },

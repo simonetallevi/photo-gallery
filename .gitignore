@@ -93,6 +93,6 @@ web/js/*.bundle.js
 /web/package-lock.json
 .gradle/**
 
-wen/dist/**
 web/.DS_Store
 .DS_Store
+web/dist/**/*
