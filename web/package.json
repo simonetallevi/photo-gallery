@@ -9,10 +9,9 @@
     "watch": "webpack --progress --colors --watch"
   },
   "author": "Simone Tallevi-Diotallevi",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
-    "angular": "^1.6.5",
-    "webpack": "^2.7.0"
-  },
-  "keywords": []
+    "html-webpack-plugin": "^2.29.0",
+    "webpack": "^3.4.1"
+  }
 }
