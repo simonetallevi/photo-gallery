@@ -3,24 +3,32 @@ webpackJsonp([0],[
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
+const css = __webpack_require__(2)
+
+angular.module('photoGallery', []);
+
+__webpack_require__(3);
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
 var angular = __webpack_require__(0);
 
-angular.module('photoGallery').controller('mainController', __webpack_require__(4));
+angular.module('photoGallery').controller('mainController', __webpack_require__(5));
 
 /***/ }),
-/* 2 */,
-/* 3 */
-/***/ (function(module, exports, __webpack_require__) {
-
-angular.module('photoGallery', []);
-
-__webpack_require__(1);
-
-/***/ }),
-/* 4 */
+/* 4 */,
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -35,4 +43,4 @@ function MainController($log) {
 module.exports = MainController;
 
 /***/ })
-],[3]);
+],[1]);
