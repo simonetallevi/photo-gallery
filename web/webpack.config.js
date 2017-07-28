@@ -1,6 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack');
+var path = require('path');
 
 module.exports = {
     context: __dirname + '/src',
@@ -20,6 +21,12 @@ module.exports = {
                 use: ['css-loader', 'sass-loader']
             })
         }]
+    },
+    devServer: {
+        contentBase: __dirname + "/dist",
+        compress: true,
+        port: 9000,
+        stats: 'errors-only'
     },
     plugins: [
         new HtmlWebpackPlugin({
