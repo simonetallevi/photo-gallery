@@ -1,6 +1,13 @@
 body {
-    background-color: palevioletred;
-    body p {
-        color: red;
-    }
+    height: 100%;
+    width: 100%;
+    background: url('./img/test.jpg') center center no-repeat
+}
+
+body p {
+    color: red;
+}
+
+.testing {
+    color: black;
 }
