@@ -46,15 +46,18 @@ module.exports = {
         new HtmlWebpackPlugin({
             title: 'Photo Gallery',
             filename: 'index.html',
+            template: 'index.html',
             minify: {
                 collapseWhitespace: true
             },
-            hash: true,
-            template: 'index.html'
+            hash: true
         }),
         new HtmlWebpackPlugin({
             filename: 'partials/home/home.html',
             template: 'partials/home/home.html',
+            minify: {
+                collapseWhitespace: true
+            },
             inject: 'body',
             chunks: [],
             allChunks: false
