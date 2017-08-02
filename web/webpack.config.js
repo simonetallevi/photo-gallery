@@ -1,6 +1,7 @@
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 var Webpack = require('webpack');
+var Path = require('path');
 var BootstrapEntryPoint = require('./webpack.bootstrap.config')
 
 var isProd = process.env.NODE_ENV == 'prod';
@@ -14,13 +15,20 @@ var bootstrapConfig = isProd ? BootstrapEntryPoint.prod : BootstrapEntryPoint.de
 
 module.exports = {
     context: __dirname + '/src',
+    resolve: {
+        alias: {
+            libs: './shared'
+        }
+    },
     entry: {
         app: './app.js',
         vendor: [
             bootstrapConfig,
+            'jquery',
             'angular',
             'angular-ui-router',
-            'angular-ui-bootstrap'
+            'angular-ui-bootstrap',
+            'libs/jquery.justifiedGallery.min.js'
         ]
     },
     output: {
@@ -72,6 +80,10 @@ module.exports = {
         new Webpack.optimize.CommonsChunkPlugin({
             name: "vendor",
             filename: "vendor.bundle.js"
+        }),
+        new Webpack.ProvidePlugin({
+            $: "jquery",
+            jQuery: "jquery"
         })
     ]
 }
